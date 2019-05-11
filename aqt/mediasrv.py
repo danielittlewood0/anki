@@ -61,7 +61,11 @@ class MediaServer(threading.Thread):
 
     def getPort(self):
         self._ready.wait()
-        return self.server.server_port
+        port = self.server.server_port
+        f = open(".server_url","w+")
+        f.write("http://127.0.0.1:%d/" % port)
+        f.close()
+        return port
 
     def shutdown(self):
         self.server.shutdown()

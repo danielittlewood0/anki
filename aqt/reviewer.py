@@ -140,7 +140,9 @@ class Reviewer:
                              "browsersel.js",
                              "mathjax/conf.js",
                              "mathjax/MathJax.js",
-                             "reviewer.js"])
+                             "reviewer.js",
+                             "pdf.js",
+                             "loadPdf.js"])
         # show answer / ease buttons
         self.bottom.web.show()
         self.bottom.web.stdHtml(
